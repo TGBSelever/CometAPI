@@ -747,7 +747,7 @@ end)
 	st.Button:ClearAllChildren()
 	st.Button.BackgroundTransparency =1
 	st.Visible = isdebug
-	local stb = st.ToggleBg
+	local stb = st:FindFirstChild("ToggleBg") or st:FindFirstChild("Bg")
 	stb.Name = "Bg"
 	stb.Size = UDim2.fromScale(.8,.8)
 	stb.UICorner.CornerRadius = UDim.new(0, 10)
