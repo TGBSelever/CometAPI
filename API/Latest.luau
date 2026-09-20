@@ -597,11 +597,11 @@ function api:CreateWindow(id: string)
 	hometabbtn.LayoutOrder = -9999
 	hometabbtn.Activated:Connect(function()
 		for i, fr in frame.TabFrame:GetChildren() do
-		if not fr:IsA("Frame") then continue end
+		if not fr:IsA("Frame") then continue end;
 			fr.Visible = false
 		end
 		for i, fr in frame.Tabs:GetChildren() do
-		if not fr:IsA("TextButton") then continue end
+		if not fr:IsA("TextButton") then continue end;
 			ts:Create(fr,TweenInfo.new(.25, Enum.EasingStyle.Linear, Enum.EasingDirection.In, 0, false, 0),{BackgroundTransparency = 1}):Play()
 		end
 		ts:Create(frame.Tabs.Home,TweenInfo.new(.25, Enum.EasingStyle.Linear, Enum.EasingDirection.In, 0, false, 0),{BackgroundTransparency = .5}):Play()
@@ -844,11 +844,11 @@ function window:CreateTab(id: string,idx: number)
 	btnround.CornerRadius = UDim.new(0, 10)
 	newtab.Activated:Connect(function(inp)
 		for i, fr in tabframe:GetChildren() do
-		if not fr:IsA("Frame") then continue end
+		if not fr:IsA("Frame") then continue end;
 			fr.Visible = false
 		end
 		for i, fr in tabs:GetChildren() do
-		if not fr:IsA("TextButton") then continue end
+		if not fr:IsA("TextButton") then continue end;
 			ts:Create(fr,TweenInfo.new(.25, Enum.EasingStyle.Linear, Enum.EasingDirection.In, 0, false, 0),{BackgroundTransparency = 1}):Play()
 		end
 				ts:Create(tabs[id],TweenInfo.new(.25, Enum.EasingStyle.Linear, Enum.EasingDirection.In, 0, false, 0),{BackgroundTransparency = .5}):Play()
