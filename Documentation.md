@@ -6,3 +6,8 @@
 
 ## Functions
 #### :CreateWindow(ID: string)
+**Example Code**
+[FINISH IT)
+```lua
+local API = 
+```
