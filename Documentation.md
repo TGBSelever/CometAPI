@@ -65,6 +65,8 @@ local MyWindow = API:CreateWindow("mywindow")
 local MyTab = MyTab:CreateTab("tab",1)
 MyTab:CreateLeftSection("section",1)
 ```
+***FUNCTION :CreateRightSection() HAS EVERYTHING THE SAME SO IT ISN'T SHOWN IN THE DOCUMENTATION.***
+
 Creates a Section with a given ID. There can exist infinite Sections.
 
 Returns: Section
@@ -83,15 +85,19 @@ Idx **MUST** be a number otherwise it will error.
 
 
 
-### API:CreateWindow(ID: string) : Window
+
+### Section:AddLabel(ID: string, Idx: number) : Label
 **Example Code**
 ```lua
 local API = loadstring(game:HttpGet("https://raw.githubusercontent.com/TGBSelever/CometAPI/refs/heads/main/API/Latest.luau"))()
-API:CreateWindow("mywindow")
+local MyWindow = API:CreateWindow("mywindow")
+local MyTab = MyTab:CreateTab("tab",1)
+local MySection = MyTab:CreateLeftSection("section",1)
+MySection:AddLabel("text",1)
 ```
-Creates a Window with a given ID. There can only exist one Window.
+Creates a Label with a given ID and Index. There can exist infinite Labels.
 
-Returns: Window
+Returns: Label
 
 **Parameters:**
 
@@ -107,39 +113,18 @@ Idx **MUST** be a number otherwise it will error.
 
 
 
-### API:CreateWindow(ID: string) : Window
+### Section:AddDivider(ID: string, Idx: number) : Divider
 **Example Code**
 ```lua
 local API = loadstring(game:HttpGet("https://raw.githubusercontent.com/TGBSelever/CometAPI/refs/heads/main/API/Latest.luau"))()
-API:CreateWindow("mywindow")
+local MyWindow = API:CreateWindow("mywindow")
+local MyTab = MyTab:CreateTab("tab",1)
+local MySection = MyTab:CreateLeftSection("section",1)
+MySection:AddDivider("divider",1)
 ```
-Creates a Window with a given ID. There can only exist one Window.
+Creates a Divider with a given ID and Index. There can exist infinite Dividers.
 
-Returns: Window
-
-**Parameters:**
-
-ID: `string`: A indentifier of the element.
-
-ID *Should* be lowercase, otherwise it **will** be converted to lowercase. Nor shouldn't it be `nil`.
-
-Idx: `number`: The order of the element. Higher = Lower.
-
-Idx **MUST** be a number otherwise it will error.
-
-
-
-
-
-### API:CreateWindow(ID: string) : Window
-**Example Code**
-```lua
-local API = loadstring(game:HttpGet("https://raw.githubusercontent.com/TGBSelever/CometAPI/refs/heads/main/API/Latest.luau"))()
-API:CreateWindow("mywindow")
-```
-Creates a Window with a given ID. There can only exist one Window.
-
-Returns: Window
+Returns: Divider
 
 **Parameters:**
 
