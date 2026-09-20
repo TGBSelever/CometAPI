@@ -1148,5 +1148,6 @@ function section:AddSlider(id: string, idx:number, min:number,max:number,default
 
 	return self
 end
+getgenv().CometAPI = api
 return api 
 -- :D
