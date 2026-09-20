@@ -1148,4 +1148,5 @@ function section:AddSlider(id: string, idx:number, min:number,max:number,default
 
 	return self
 end
-return api
+return api 
+-- :D
