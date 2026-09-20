@@ -596,11 +596,11 @@ function api:CreateWindow(id: string)
 	hometabbtn.BackgroundTransparency=.5
 	hometabbtn.LayoutOrder = -9999
 	hometabbtn.Activated:Connect(function()
-		for i, fr in frame.TabFrame:GetChildren() do
+		for i, fr in pairs(frame.TabFrame:GetChildren()) do
 		if not fr:IsA("Frame") then continue end;
 			fr.Visible = false
 		end
-		for i, fr in frame.Tabs:GetChildren() do
+		for i, fr in pairs(frame.Tabs:GetChildren()) do
 		if not fr:IsA("TextButton") then continue end;
 			ts:Create(fr,TweenInfo.new(.25, Enum.EasingStyle.Linear, Enum.EasingDirection.In, 0, false, 0),{BackgroundTransparency = 1}):Play()
 		end
@@ -795,7 +795,7 @@ end)
 	hometabs.changelog.Title = "Comet API ChangeLog"
 	hometabs.changelog.Obj.Title.TextColor3 = Color3.fromRGB(220, 200, 255)
 	hometabs.changelog.Obj.Title.Size = UDim2.new(.95, 0, 0, 25)
-	for i, log in changelog do
+	for i, log in pairs(changelog) do
 		hometabs.changelog:AddDivider("d"..log.Index,log.Index*-1)
 		hometabs.changelog:AddLabel("l"..log.Index,log.Index*-1)
 		hometabs.changelog["l"..i].Obj.AutomaticSize = "Y"
@@ -843,11 +843,11 @@ function window:CreateTab(id: string,idx: number)
 	btnround.Parent = newtab
 	btnround.CornerRadius = UDim.new(0, 10)
 	newtab.Activated:Connect(function(inp)
-		for i, fr in tabframe:GetChildren() do
+		for i, fr in pairs(tabframe:GetChildren()) do
 		if not fr:IsA("Frame") then continue end;
 			fr.Visible = false
 		end
-		for i, fr in tabs:GetChildren() do
+		for i, fr in pairs(tabs:GetChildren()) do
 		if not fr:IsA("TextButton") then continue end;
 			ts:Create(fr,TweenInfo.new(.25, Enum.EasingStyle.Linear, Enum.EasingDirection.In, 0, false, 0),{BackgroundTransparency = 1}):Play()
 		end
