@@ -2,18 +2,28 @@
 
 ### SUPPORT: [Discord](https://discord.com/users/1343301126581387345)
 
+<hr>
+
 #### Current Version: 1.0.0
 
 ## Functions
 ### API:CreateWindow(ID: string) : Window
+
+
+
 **Example Code**
 ```lua
 local API = loadstring(game:HttpGet("https://raw.githubusercontent.com/TGBSelever/CometAPI/refs/heads/main/API/Latest.luau"))()
 API:CreateWindow("mywindow")
 ```
+
+<hr>
+
 Creates a Window with a given ID. There can only exist one Window.
 
 Returns: Window
+
+<hr>
 
 **Parameters:**
 
@@ -24,10 +34,13 @@ ID *Should* be lowercase, otherwise it **will** be converted to lowercase. Nor s
 
 
 
-
+<hr>
 
 
 ### Window:CreateTab(ID: string, Idx: number) : Tab
+
+
+
 **Example Code**
 ```lua
 local API = loadstring(game:HttpGet("https://raw.githubusercontent.com/TGBSelever/CometAPI/refs/heads/main/API/Latest.luau"))()
@@ -39,9 +52,14 @@ MyTab:CreateTab("tab",1)
 local API = loadstring(game:HttpGet("https://raw.githubusercontent.com/TGBSelever/CometAPI/refs/heads/main/API/Latest.luau"))()
 API:CreateWindow("mywindow"):CreateTab("tab",1)
 ```
+
+<hr>
+
 Creates a Tab with a given ID and Index. There can only exist many Tabs.
 
 Returns: Tab
+
+<hr>
 
 **Parameters:**
 
@@ -55,7 +73,7 @@ Idx **MUST** be a number otherwise it will error.
 
 
 
-
+<hr>
 
 ### Tab:CreateLeftSection(ID: string, Idx: number) : Section
 **Example Code**
@@ -67,9 +85,13 @@ MyTab:CreateLeftSection("section",1)
 ```
 ***FUNCTION :CreateRightSection() HAS EVERYTHING THE SAME SO IT ISN'T SHOWN IN THE DOCUMENTATION.***
 
+<hr>
+
 Creates a Section with a given ID. There can exist infinite Sections.
 
 Returns: Section
+
+<hr>
 
 **Parameters:**
 
@@ -84,7 +106,7 @@ Idx **MUST** be a number otherwise it will error.
 
 
 
-
+<hr>
 
 ### Section:AddLabel(ID: string, Idx: number) : Label
 **Example Code**
@@ -95,9 +117,14 @@ local MyTab = MyTab:CreateTab("tab",1)
 local MySection = MyTab:CreateLeftSection("section",1)
 MySection:AddLabel("text",1)
 ```
+
+<hr>
+
 Creates a Label with a given ID and Index. There can exist infinite Labels.
 
 Returns: Label
+
+<hr>
 
 **Parameters:**
 
@@ -111,7 +138,7 @@ Idx **MUST** be a number otherwise it will error.
 
 
 
-
+<hr>
 
 ### Section:AddDivider(ID: string, Idx: number) : Divider
 **Example Code**
@@ -122,9 +149,14 @@ local MyTab = MyTab:CreateTab("tab",1)
 local MySection = MyTab:CreateLeftSection("section",1)
 MySection:AddDivider("divider",1)
 ```
+
+<hr>
+
 Creates a Divider with a given ID and Index. There can exist infinite Dividers.
 
 Returns: Divider
+
+<hr>
 
 **Parameters:**
 
@@ -137,7 +169,7 @@ Idx: `number`: The order of the element. Higher = Lower.
 Idx **MUST** be a number otherwise it will error.
 
 
-
+<hr>
 
 
 ### Section:AddButton(ID: string, Idx: number) : Button
@@ -149,9 +181,14 @@ local MyTab = MyTab:CreateTab("tab",1)
 local MySection = MyTab:CreateLeftSection("section",1)
 MySection:AddButton("btn",1)
 ```
+
+<hr>
+
 Creates a Button with a given ID and Index. There can exist infinite Buttons.
 
 Returns: Button
+
+<hr>
 
 **Parameters:**
 
@@ -164,7 +201,7 @@ Idx: `number`: The order of the element. Higher = Lower.
 Idx **MUST** be a number otherwise it will error.
 
 
-
+<hr>
 
 
 ### Section:AddToggle(ID: string, Idx: number, Default: boolean) : Toggle
@@ -176,9 +213,14 @@ local MyTab = MyTab:CreateTab("tab",1)
 local MySection = MyTab:CreateLeftSection("section",1)
 MySection:AddToggle("tgle",1)
 ```
+
+<hr>
+
 Creates a Toggle with a given ID, Index and a Default value. There can exist infinite Toggles.
 
 Returns: Toggle
+
+<hr>
 
 **Parameters:**
 
@@ -194,7 +236,7 @@ Default: `boolean`: Depicts the default value of the toggle.
 
 Default **MUST** be either `true` or `false`
 
-
+<hr>
 
 
 
@@ -207,9 +249,14 @@ local MyTab = MyTab:CreateTab("tab",1)
 local MySection = MyTab:CreateLeftSection("section",1)
 MySection:AddSlider("walkspeed",1,1,100,16)
 ```
+
+<hr>
+
 Creates a Slider with a given ID, Index, Minimum value, Maximum value and a Default value. There can exist infinite Sliders.
 
 Returns: Slider
+
+<hr>
 
 **Parameters:**
 
@@ -233,7 +280,7 @@ Default: `number`: The default value of the slider.
 
 Default *Should* be in the range in between `Min` and `Max`
 
-
+<hr>
 
 ## Properties
 
@@ -255,6 +302,8 @@ Obj: `Frame` - The frame of the Window.
 
 Changed: `function` - The function that can be used to detect when a property gets changed.
 
+<hr>
+
 ### Tab
 
 Visible: `boolean` - Depicts either the Tab is visible or not. **MUST** be `true` or `false`.
@@ -271,6 +320,8 @@ Obj: `TextButton` - The button of the Tab. **[NOT RECOMMENDED, USE `.Button` INS
 
 Changed: `function` - The function that can be used to detect when a property gets changed. 
 
+<hr>
+
 ### Section
 
 Visible: `boolean` - Depicts either the Section is visible or not. **MUST** be `true` or `false`.
@@ -280,6 +331,8 @@ Title: `string` - The title on top of the Section.
 Obj: `Frame` - The frame of the Section.
 
 Changed: `function` - The function that can be used to detect when a property gets changed. 
+
+<hr>
 
 ### Label
 
@@ -291,6 +344,8 @@ Obj: `Frame` - The frame of the Label.
 
 Changed: `function` - The function that can be used to detect when a property gets changed. 
 
+<hr>
+
 ### Divider
 
 Visible: `boolean` - Depicts either the Divider is visible or not. **MUST** be `true` or `false`.
@@ -298,6 +353,8 @@ Visible: `boolean` - Depicts either the Divider is visible or not. **MUST** be `
 Obj: `Frame` - The frame of the Divider.
 
 Changed: `function` - The function that can be used to detect when a property gets changed. 
+
+<hr>
 
 ### Button
 
@@ -310,6 +367,8 @@ Value: `boolean` - The value of the Button. When pressed turns to  `true` for a 
 Obj: `Frame` - The frame of the Button.
 
 Changed: `function` - The function that can be used to detect when a property gets changed. 
+
+<hr>
 
 ### Toggle
 
@@ -324,6 +383,8 @@ Default: `boolean` - The default value of the Toggle.
 Obj: `Frame` - The frame of the Toggle.
 
 Changed: `function` - The function that can be used to detect when a property gets changed. 
+
+<hr>
 
 ### Slider
 
@@ -351,8 +412,12 @@ To up hook a function with the .Changed property use:
 ```lua
 [OBJECT].Changed = function(property, value) ... end
 ```
+<hr>
+
 `property` Depicts what property changed. Ex. `Visible`, `Value`.
 
 `value` Depicts what the `property` changed to. Ex. `true`, `15`
+
+<hr>
 
 ### When you take the API and modify it, please credit me. 
